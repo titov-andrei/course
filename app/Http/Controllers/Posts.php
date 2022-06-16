@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class Posts extends Controller
 {
-    //
+    public function index() {
+        return 'index';
+    }
 }
