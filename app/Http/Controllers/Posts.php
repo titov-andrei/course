@@ -9,7 +9,7 @@ class Posts extends Controller
 {
     public function index() {
 
-        dd(Post::findOrFail(1));
+        dd(Post::findOrFail(3));
 
         // $post = new Post();
         // $post->title = '111';
