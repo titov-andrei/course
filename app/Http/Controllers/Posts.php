@@ -9,7 +9,10 @@ class Posts extends Controller
 {
     public function index() {
 
-        (new Post())->save();
+        
+
+
+        // (new Post())->save();
 
         return view('posts.index', [
             'rand' => mt_rand(0, 10),
