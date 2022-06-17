@@ -1,9 +1,4 @@
-@if ($rand > 5)
-    <div>{{ $rand }}</div>
-@else
-    <div>{{ $time }}</div>
-@endif
-<hr>
-@foreach ($items as $item)
-    <div>{{ $item }}</div>
+<h1>Blog</h1>
+@foreach ($posts as $post)
+    <h2>{{ $post->title }}</h2>
 @endforeach
