@@ -9,11 +9,13 @@ class Posts extends Controller
 {
     public function index() {
 
-        $post = new Post();
-        $post->title = '111';
-        $post->content = '111';
-        $post->a = '111';
-        $post->save();
+        dd(Post::findOrFail(1));
+
+        // $post = new Post();
+        // $post->title = '111';
+        // $post->content = '111';
+        // $post->a = '111';
+        // $post->save();
 
         // (new Post())->save();
 
