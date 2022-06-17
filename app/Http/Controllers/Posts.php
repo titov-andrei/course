@@ -9,7 +9,7 @@ class Posts extends Controller
 {
     public function index() {
 
-        dd(Post::all());
+        // dd(Post::all());
 
         // $post = new Post();
         // $post->title = '111';
@@ -19,10 +19,6 @@ class Posts extends Controller
 
         // (new Post())->save();
 
-        return view('posts.index', [
-            'rand' => mt_rand(0, 10),
-            'time' => time(),
-            'items' => [1, 2, 3]
-        ]);
+        return view('posts.index', [ 'posts' => Post::all() ]);
     }
 }
