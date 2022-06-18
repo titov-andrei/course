@@ -7,7 +7,8 @@ use App\Models\Post;
 
 class Posts extends Controller
 {
-    public function index() {
+    public function index()
+    {
 
         // dd(Post::all());
 
@@ -19,6 +20,12 @@ class Posts extends Controller
 
         // (new Post())->save();
 
-        return view('posts.index', [ 'posts' => Post::all() ]);
+        return view('posts.index', ['posts' => Post::all()]);
+    }
+    public function create()
+    {
+    }
+    public function store()
+    {
     }
 }
