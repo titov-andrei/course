@@ -8,4 +8,6 @@ use App\Http\Controllers\Posts;
 //     return view('welcome');
 // });
 
-Route::get('/', [ Posts::class, 'index' ]);
+Route::get('/posts', [ Posts::class, 'index' ]);
+Route::post('/posts/create', [ Posts::class, 'create' ]);
+Route::post('/posts', [ Posts::class, 'store' ]);
