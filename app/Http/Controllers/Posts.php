@@ -23,6 +23,11 @@ class Posts extends Controller
         return view('posts.index', ['posts' => Post::all()]);
     }
 
+    public function show()
+    {
+        return view('posts.show');
+    }
+
     public function create()
     {
         return view('posts.create');
@@ -39,7 +44,7 @@ class Posts extends Controller
         // $post->save();
         // return 'post created';
 
-        $data = $request->only([ 'title', 'content' ]);
+        $data = $request->only(['title', 'content']);
         Post::create($data);
         // return 'post created';
         return redirect('/posts');
