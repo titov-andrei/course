@@ -41,6 +41,7 @@ class Posts extends Controller
 
         $data = $request->only([ 'title', 'content' ]);
         Post::create($data);
-        return 'post created';
+        // return 'post created';
+        return redirect('/posts');
     }
 }
