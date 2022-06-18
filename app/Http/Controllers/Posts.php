@@ -23,9 +23,9 @@ class Posts extends Controller
         return view('posts.index', ['posts' => Post::all()]);
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('posts.show');
+        return view('posts.show', [ 'post' => Post::findOrFail($id) ]);
     }
 
     public function create()
