@@ -30,6 +30,13 @@ class Posts extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        $args = $request->all();
+        $post = new Post();
+        $post->title = $args['title'];
+        $post->content = $args['content'];
+        $post->save();
+        return 'post created';
     }
 }
