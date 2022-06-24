@@ -15,6 +15,9 @@ Route::get('/posts/{id}', [ PostsController::class, 'show' ]);
 Route::post('/posts', [ PostsController::class, 'store' ]);
 
 Route::get('/categories', [ CategoriesController::class, 'index' ]);
-Route::get('/posts/create', [ CategoriesController::class, 'create' ]);
-Route::get('/posts/{id}', [ CategoriesController::class, 'show' ]);
-Route::post('/posts', [ CategoriesController::class, 'store' ]);
+Route::get('/categories/create', [ CategoriesController::class, 'create' ]);
+Route::get('/categories/{id}', [ CategoriesController::class, 'show' ]);
+Route::post('/categories', [ CategoriesController::class, 'store' ]);
+Route::get('/categories/{id}/edit', [ CategoriesController::class, 'edit' ]);
+Route::put('/categories/{id}/update', [ CategoriesController::class, 'update' ]);
+Route::delete('/categories/{id}/destroy', [ CategoriesController::class, 'destroy' ]);
